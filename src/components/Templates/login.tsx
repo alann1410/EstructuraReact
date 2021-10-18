@@ -4,6 +4,7 @@ import Password from "../Atoms/textbox/textbox";
 import TitleTextbox from "../Atoms/labels/labels";
 import ButtonLogin from '../Atoms/buttons/buttons';
 import ButtonRegistrer from '../Atoms/buttons/buttons';
+import ButtonLoginAux from '../Atoms/buttons/buttonsAux';
 
 
 function Login() {
@@ -11,28 +12,32 @@ function Login() {
     <Fragment>
         <div className ="formLogin">
             <form>
-                <div className="form-group">
-                    <TitleTextbox  
-                        text = 'Inserte Email'
+                <div className="forCompleteLogin">
+                    <div className="form-group">
+                        <TitleTextbox  
+                            text = 'Ingrese Email'
+                        />
+                        <GenericTextbox 
+                            title = 'Email'
+                        />
+                    </div>
+                    <div className="form-group">
+                        <TitleTextbox 
+                            text = 'Ingrese Contraseña'
+                        />
+                        <Password
+                            title = 'Contraseña'
+                        />
+                    </div>
+                </div>
+                <div className="buttonsLogin">
+                    <ButtonRegistrer 
+                        text = 'Registrarse'
                     />
-                    <GenericTextbox 
-                        title = 'Inserte Email'
+                    <ButtonLogin 
+                        text = 'Login'
                     />
                 </div>
-                <div className="form-group">
-                    <TitleTextbox 
-                        text = 'Inserte Contraseña'
-                    />
-                    <Password
-                        title = 'Inserte Contraseña'
-                    />
-                </div>
-                <ButtonRegistrer 
-                    text = 'Registrarse'
-                />
-                <ButtonLogin 
-                    text = 'Login'
-                />
             </form>
         </div>
     </Fragment>

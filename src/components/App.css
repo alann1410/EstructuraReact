@@ -1,3 +1,33 @@
 .formLogin{
-    width: 300px;
+    width: 350px;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.titleLogin{
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.labelTextbox{
+    margin-top:20px;
+}
+
+.buttonLogin{
+    margin-top:40px;
+    width: 130px;
+}
+
+.forCompleteLogin{
+    display: block;
+}
+
+.buttonsLogin{
+    display:flex;
+    justify-content: space-between;
+  
 }

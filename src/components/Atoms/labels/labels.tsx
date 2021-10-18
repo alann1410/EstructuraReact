@@ -7,7 +7,7 @@ interface text{
 function TitleTextbox({text}: text){
     return (
     <Fragment>
-        <label>{text}</label>
+        <label className="labelTextbox">{text}</label>
     </Fragment>
     );
 }

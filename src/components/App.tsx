@@ -10,8 +10,10 @@ interface Props{
 function App({title}: Props) {
   return (
     <div> 
-    <h1>{title}</h1>
-    <Login /> 
+      <div className="titleLogin">
+        <h1>{title}</h1>
+      </div>
+        <Login /> 
     </div>
   );
 }

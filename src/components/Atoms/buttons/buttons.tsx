@@ -1,4 +1,5 @@
 import React, {useState, Fragment, Component} from 'react' //useState = para inicializar una variable, Fragment = para no encapsular el html en un div
+import Button from 'react-bootstrap/Button';
 
 // const buttonLogin : React.FunctionComponent = () => {
     
@@ -27,20 +28,25 @@ import React, {useState, Fragment, Component} from 'react' //useState = para ini
 interface text{
     text: string
 }
+interface style{
+    style: string
+}
+
+
 
 function ButtonLogin ({text}: text){
     return (
         <Fragment>
-            <button type="button" className="btn btn-primary">{text}</button>
+            <button type="button" className="buttonLogin btn btn-primary">{text}</button>
         </Fragment>
     );
 }
 
 
-function ButtonRegistrer ({text}: text){
+const ButtonRegistrer  = ({text}: text, {style}: style) => {
     return (
-        <Fragment>
-            <button type="button" className="btn btn-secondary">{text}</button>
+        <Fragment >
+            <Button className="buttonLogin" variant="secondary">{text}</Button>
         </Fragment>
     );
 }
@@ -48,7 +54,7 @@ function ButtonRegistrer ({text}: text){
 function ButtonCancel ({text}: text){
     return (
         <Fragment>
-            <button type="button" className="btn btn-primary">{text}</button>
+            <button className="buttonLogin" type="button">{text}</button>
         </Fragment>
     );
 }
