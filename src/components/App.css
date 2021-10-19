@@ -7,6 +7,15 @@
     margin-top: 60px;
 }
 
+.formRegister{
+    width: 650px;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 60px;
+}
+
 .titleLogin{
     text-align: center;
     width: 100%;

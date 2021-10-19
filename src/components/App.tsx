@@ -1,5 +1,6 @@
 import Login from "./Templates/login";
 import "../components/App.css";
+import Register from "./Templates/register";
 
 
 
