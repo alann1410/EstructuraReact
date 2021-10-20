@@ -1,11 +1,15 @@
 import React , {Fragment} from 'react'
-import TitleTextbox from "../Atoms/labels/labels";
 import GenericTextbox from "../Atoms/textbox/textbox";
 import SBSexo from '../Atoms/selectBox/selectBox';
+import ButtonLogin, {ButtonBack} from '../Atoms/buttons/buttons';
+import TitleTextbox, {TitlePage} from "../Atoms/labels/labels";
 
 function Register () {
     return(
     <Fragment>
+        <TitlePage 
+                text = 'Application'
+                />
         <div className ="formRegister">
             <form>
                 <div className="form-row">
@@ -74,7 +78,12 @@ function Register () {
                         </label>
                         </div>
                     </div>
-                    <button type="submit" className="btn btn-primary">Hecho!</button>
+                    <ButtonLogin
+                    text = 'Hecho!'
+                    />
+                    <ButtonBack
+                    text = 'Volver'
+                    />
             </form>
         </div>
     </Fragment>

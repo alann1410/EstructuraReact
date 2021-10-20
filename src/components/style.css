@@ -31,6 +31,11 @@
     width: 130px;
 }
 
+.buttonBack{
+    margin-top:40px;
+    width: 130px;
+}
+
 .forCompleteLogin{
     display: block;
 }
@@ -53,13 +58,9 @@ body, html {
     background-size: cover;
     min-width: 100%;
     min-height: 100%;
+    width: 100%;
+    height: 100vh;
 } 
 
-/* .Index-component {
-    background-image: url('../components/Atoms/img/welcome.jpg');
-    height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
+
 

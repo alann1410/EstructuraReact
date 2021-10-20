@@ -33,13 +33,21 @@ const ButtonRegister  = ({text}: text, {linkPage}: Props) => {
     );
 }
 
-function ButtonCancel ({text}: text){
+export function ButtonCancel ({text}: text){
     return (
         <Fragment>
             <button className="buttonCancel" type="button">{text}</button>
         </Fragment>
     );
 }
+
+export function ButtonBack ({text}: text){
+    return (
+        <Fragment>
+            <button className="buttonLogin btn btn-secondary" type="button">{text}</button>
+        </Fragment>
+    );
+}
+
 export default ButtonLogin;
-export {ButtonRegister};
-export {ButtonCancel};
+
