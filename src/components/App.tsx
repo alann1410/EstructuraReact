@@ -1,19 +1,13 @@
 import Login from "./Templates/login";
-import "../components/App.css";
+import "../components/style.css";
 import Register from "./Templates/register";
+import Index from "./Templates";
 
 
 
-interface Props{
-  title: string
-}
-
-function App({title}: Props) {
+function App() {
   return (
     <div> 
-      <div className="titleLogin">
-        <h1>{title}</h1>
-      </div>
         <Login /> 
     </div>
   );

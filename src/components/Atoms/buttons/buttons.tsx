@@ -1,6 +1,7 @@
 import React, {useState, Fragment, Component} from 'react' //useState = para inicializar una variable, Fragment = para no encapsular el html en un div
 import Button from 'react-bootstrap/Button';
 import Register from "../../Templates/register";
+import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
 
 interface text{
@@ -8,6 +9,10 @@ interface text{
 }
 interface style{
     style: string
+}
+
+interface Props{
+    linkPage: string
 }
 
 function ButtonLogin ({text}: text){
@@ -18,10 +23,12 @@ function ButtonLogin ({text}: text){
     );
 }
 
-const ButtonRegistrer  = ({text}: text) => {
+const ButtonRegistrer  = ({text}: text, {linkPage}: Props) => {
     return (
         <Fragment>
+             <Link to='../Templates/register'> 
                 <button type="button" className="btn btn-secondary">{text}</button>
+            </Link> 
         </Fragment>
     );
 }
@@ -29,7 +36,7 @@ const ButtonRegistrer  = ({text}: text) => {
 function ButtonCancel ({text}: text){
     return (
         <Fragment>
-            <button className="buttonLogin" type="button">{text}</button>
+            <button className="buttonCancel" type="button">{text}</button>
         </Fragment>
     );
 }
