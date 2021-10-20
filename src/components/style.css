@@ -41,10 +41,25 @@
   
 }
 
-html, body, .screenWelcome{
+body, html {
     height: 100%;
+    margin: 0;
+}
+
+.screenWelcome{
     background-image: url('../components/Atoms/img/welcome.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+    min-width: 100%;
+    min-height: 100%;
+} 
+
+/* .Index-component {
+    background-image: url('../components/Atoms/img/welcome.jpg');
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+

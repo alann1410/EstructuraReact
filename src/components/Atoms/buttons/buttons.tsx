@@ -23,7 +23,7 @@ function ButtonLogin ({text}: text){
     );
 }
 
-const ButtonRegistrer  = ({text}: text, {linkPage}: Props) => {
+const ButtonRegister  = ({text}: text, {linkPage}: Props) => {
     return (
         <Fragment>
              <Link to='../Templates/register'> 
@@ -41,5 +41,5 @@ function ButtonCancel ({text}: text){
     );
 }
 export default ButtonLogin;
-export {ButtonRegistrer};
+export {ButtonRegister};
 export {ButtonCancel};

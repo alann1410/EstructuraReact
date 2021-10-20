@@ -1,30 +1,24 @@
 import React , {Fragment} from 'react'
 import GenericTextbox from "../Atoms/textbox/textbox";
 import Password from "../Atoms/textbox/textbox";
+import TitlePage from "../Atoms/labels/labels";
 import TitleTextbox from "../Atoms/labels/labels";
 import ButtonLogin from '../Atoms/buttons/buttons';
 import ButtonRegistrer from '../Atoms/buttons/buttons';
 import ButtonLoginAux from '../Atoms/buttons/buttonsAux';
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Register from '../Templates/register';
-import TitlePage from "../Atoms/labels/labels";
+import Index from '../Templates/index';
 
 
 function Login() {
   return (
-    <Fragment>
     <Router>
-    
-    <Link to='/register'>  
-        <ButtonRegistrer 
-            text = {'Registrarse'}
-        />
-        <ButtonLogin 
-            text = 'Login'
-        />
-      </Link>
+    <Switch>
+    <Fragment>
+       
       <TitlePage 
-      text = 'Application'
+        text = 'Application'
       />
         <div className ="formLogin">
             <form>
@@ -45,20 +39,34 @@ function Login() {
                             title = 'Contraseña'
                         />
                     </div>
-                </div>
-                 <Switch>
                     <div className="buttonsLogin">
-                    <Route path='/register'>
-                        <Register />
-                    </Route>  
-                    
+
+                        <Link to="/register">
+                            <ButtonRegistrer 
+                                text = 'Registrarse'
+                            />
+                        </Link>
+                        <Link to="/index">
+                            <ButtonLogin 
+                                text = 'Login'
+                            />
+                        </Link>
+
+                    <Route path="/index" exact>
+                        <Index/>
+                    </Route>
+                        <Route path="/register">
+                            <Register />
+                        </Route>
                     </div>
-                </Switch> 
+                </div>
+                 
             </form>
         </div>
-        </Router>
+        
     </Fragment>
-   
+    </Switch>
+        </Router>
   );
 }
 

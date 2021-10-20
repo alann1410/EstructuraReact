@@ -16,7 +16,7 @@ function TitlePage({text}: text){
     return (
     <Fragment>
        <div className="titleLogin">
-        <h1>{text}</h1>
+            <h1>{text}</h1>
       </div>
     </Fragment>
     );
