@@ -15,7 +15,7 @@ interface Props{
     linkPage: string
 }
 
-function ButtonLogin ({text}: text){
+function ButtonAccept ({text}: text){
     return (
         <Fragment>
                 <button type="button" className="buttonLogin btn btn-primary">{text}</button>
@@ -47,5 +47,5 @@ export function ButtonBack ({text}: text){
     );
 }
 
-export default ButtonLogin;
+export default ButtonAccept;
 

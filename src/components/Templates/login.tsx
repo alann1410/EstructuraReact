@@ -2,7 +2,7 @@ import React , {Fragment} from 'react'
 import GenericTextbox from "../Atoms/textbox/textbox";
 import Password from "../Atoms/textbox/textbox";
 import TitleTextbox, {TitlePage} from "../Atoms/labels/labels";
-import ButtonLogin, { ButtonRegister } from '../Atoms/buttons/buttons';
+import ButtonAccept, { ButtonRegister } from '../Atoms/buttons/buttons';
 import { BrowserRouter, Switch, Route, Link} from 'react-router-dom';
 import Register from '../Templates/register';
 import Index from '../Templates/index';
@@ -44,7 +44,7 @@ function Login() {
                         <ButtonRegister text="Registrarse" />
                         </Link>
                         <Link to="/index">
-                            <ButtonLogin text="Login" />
+                            <ButtonAccept text="Login" />
                         </Link>
                   </div>
                 </form>

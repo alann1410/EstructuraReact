@@ -1,7 +1,7 @@
 import React , {Fragment} from 'react'
 import GenericTextbox from "../Atoms/textbox/textbox";
 import SBSexo from '../Atoms/selectBox/selectBox';
-import ButtonLogin, {ButtonBack} from '../Atoms/buttons/buttons';
+import ButtonAccept, {ButtonBack} from '../Atoms/buttons/buttons';
 import TitleTextbox, {TitlePage} from "../Atoms/labels/labels";
 
 function Register () {
@@ -79,12 +79,12 @@ function Register () {
                         </div>
                     </div>
                     <div className="buttonsLogin">
-                    <ButtonBack
-                    text = 'Volver'
-                    />
-                    <ButtonLogin
-                    text = 'Hecho!'
-                    />
+                        <ButtonBack
+                        text = 'Volver'
+                        />
+                        <ButtonAccept
+                        text = 'Hecho!'
+                        />
                     </div>
             </form>
         </div>
