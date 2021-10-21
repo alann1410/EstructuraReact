@@ -1,6 +1,6 @@
 import React, {useState, Fragment, Component} from 'react' //useState = para inicializar una variable, Fragment = para no encapsular el html en un div
 import Button from 'react-bootstrap/Button';
-import Register from "../../Templates/register";
+import Register from "../../Templates/registerTemplate";
 
 
 function SBSexo (){

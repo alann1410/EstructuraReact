@@ -1,25 +1,33 @@
 import React, {Fragment } from 'react';
 
 interface text{
-    text: string
+    title: string
 }
 
-function TitleTextbox({text}: text){
+function TitleTextbox({title}: text){
     return (
     <Fragment>
-        <label className="labelTextbox">{text}</label>
+        <label className="labelTextbox">{title}</label>
     </Fragment>
     );
 }
 
-function TitlePage({text}: text){
+function TitlePage({title}: text){
     return (
     <Fragment>
        <div className="titleLogin">
-            <h1>{text}</h1>
+            <h1>{title}</h1>
       </div>
     </Fragment>
     );
+}
+
+export function LabelForCheckbox({title}: text){
+    return(
+        <label className="form-check-label">
+              {title}
+        </label>
+    )
 }
 
 

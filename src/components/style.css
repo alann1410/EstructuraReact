@@ -7,7 +7,7 @@
     margin-top: 60px;
 }
 
-.formRegister{
+.containerRegister{
     width: 650px;
     justify-content: center;
     left: 0;
@@ -40,7 +40,7 @@
     display: block;
 }
 
-.buttonsLogin{
+.buttonsGeneric{
     display:flex;
     justify-content: space-between;
 }
