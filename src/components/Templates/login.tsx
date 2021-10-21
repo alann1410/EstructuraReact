@@ -28,7 +28,7 @@ function Login() {
             <TitlePage 
                 text = 'Application'
                 />
-
+                <main className="container p-4">
               <div className="formLogin">
                 <form>
                   <div className="forCompleteLogin">
@@ -40,17 +40,18 @@ function Login() {
                       <TitleTextbox text="Ingrese Contraseña" />
                       <Password title="Contraseña" />
                     </div>
-                  </div>
-                  <div className="buttonsLogin">
-                    <Link to="/register">
-                      <ButtonRegistrer text="Registrarse" />
-                    </Link>
-                    <Link to="/index">
-                        <ButtonLogin text="Login" />
-                    </Link>
+                    </div>
+                    <div className="buttonsLogin">
+                        <Link to="/register">
+                        <ButtonRegistrer text="Registrarse" />
+                        </Link>
+                        <Link to="/index">
+                            <ButtonLogin text="Login" />
+                        </Link>
                   </div>
                 </form>
               </div>
+              </main>
             </Route>
           </Switch>
         </Fragment>

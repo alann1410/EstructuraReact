@@ -78,11 +78,11 @@ function Register () {
                         </label>
                         </div>
                     </div>
-                    <ButtonLogin
-                    text = 'Hecho!'
-                    />
                     <ButtonBack
                     text = 'Volver'
+                    />
+                    <ButtonLogin
+                    text = 'Hecho!'
                     />
             </form>
         </div>
