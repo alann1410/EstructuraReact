@@ -2,7 +2,7 @@ import React, {useState, Fragment, Component} from 'react' //useState = para ini
 import Button from 'react-bootstrap/Button';
 import Register from "../../Templates/register";
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
-
+import { useHistory } from "react-router-dom";
 
 interface text{
     text: string
@@ -39,10 +39,18 @@ export function ButtonCancel ({text}: text){
     );
 }
 
-export function ButtonBack ({text}: text){
+interface btnBack
+{
+    text: string;
+    ruta: string;
+}
+export function ButtonBack ({text, ruta}: btnBack){
+
+    let history = useHistory();
+
     return (
         <Fragment>
-            <button className="buttonLogin btn btn-secondary" type="button">{text}</button>
+            <button onClick={() => {history.push(ruta);}} className="buttonLogin btn btn-secondary" type="button">{text}</button>
         </Fragment>
     );
 }

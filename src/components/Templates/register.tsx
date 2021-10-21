@@ -5,6 +5,9 @@ import ButtonAccept, {ButtonBack} from '../Atoms/buttons/buttons';
 import TitleTextbox, {TitlePage} from "../Atoms/labels/labels";
 
 function Register () {
+
+
+
     return(
     <Fragment>
         <TitlePage 
@@ -80,7 +83,8 @@ function Register () {
                     </div>
                     <div className="buttonsLogin">
                         <ButtonBack
-                        text = 'Volver'
+                            text = 'Volver'
+                            ruta = "/login"
                         />
                         <ButtonAccept
                         text = 'Hecho!'
