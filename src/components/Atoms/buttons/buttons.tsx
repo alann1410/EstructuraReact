@@ -23,12 +23,10 @@ function ButtonLogin ({text}: text){
     );
 }
 
-const ButtonRegister  = ({text}: text, {linkPage}: Props) => {
+export const ButtonRegister  = ({text}: text, {linkPage}: Props) => {
     return (
-        <Fragment>
-             <Link to='../Templates/register'> 
-                <button type="button" className="btn btn-secondary">{text}</button>
-            </Link> 
+        <Fragment> 
+            <button type="button" className="buttonLogin btn btn-secondary">{text}</button>
         </Fragment>
     );
 }
