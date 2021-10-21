@@ -78,12 +78,14 @@ function Register () {
                         </label>
                         </div>
                     </div>
+                    <div className="buttonsLogin">
                     <ButtonBack
                     text = 'Volver'
                     />
                     <ButtonLogin
                     text = 'Hecho!'
                     />
+                    </div>
             </form>
         </div>
     </Fragment>
