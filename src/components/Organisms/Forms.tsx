@@ -1,25 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Generalcheckbox from '../Atoms/checkbox/checkbox'
 import TitleTextbox, { LabelForCheckbox } from '../Atoms/labels/labels'
 import SBSexo from '../Atoms/selectBox/selectBox'
 import CheckboxLabels from '../Molecules/CheckboxLabels'
-import TextBoxLabels, {PasswordLabel} from '../Molecules/TextBoxLabels'
-
+import TextBoxLabels, {PasswordLabel, EmailLabel} from '../Molecules/TextBoxLabels'
 
 export function FormLogin() {
+
+    let [userEmail, setUserEmail] = useState("");
+    let [userPassword, setUserPassword] = useState("");
+
     return (
         <>
             <div className="forCompleteLogin">
                 <div className="form-group">
-                    <TextBoxLabels
+                    <EmailLabel
                         title = "Ingrese Email"
                         placeholder = "Email"
+                        setEmail = {setUserEmail}
+                        {...console.log(userEmail)}
                     />
                 </div>
                 <div className="form-group">
                     <PasswordLabel 
                         title= "Ingrese contraseña"
                         placeholder = "Contraseña"
+                        setPassword = {setUserPassword}
+                        {...console.log(userPassword)}
                     />
                 </div>
             </div>

@@ -1,13 +1,27 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 import TitleTextbox from '../Atoms/labels/labels';
-import GenericTextbox, { Password } from '../Atoms/textbox/textbox';
+import GenericTextbox, { Password, EmailTextbox } from '../Atoms/textbox/textbox';
 
-interface Props{
+interface PropsTextbox{
     title: string;
     placeholder: string;
 }
 
-export default function TextBoxLabels({title, placeholder}: Props) {
+interface PropsEmail{
+    title: string;
+    placeholder: string;
+    setEmail: (string: string)=> void;
+}
+
+interface PropsPassword{
+    title: string;
+    placeholder: string;
+    setPassword: (string: string)=> void;
+}
+
+
+export default function TextBoxLabels({title, placeholder}: PropsTextbox) {
+    
     return (
         <>
             <TitleTextbox  
@@ -20,12 +34,29 @@ export default function TextBoxLabels({title, placeholder}: Props) {
     )
 }
 
-export function PasswordLabel({title, placeholder}: Props){
+export function PasswordLabel({title, placeholder, setPassword}: PropsPassword){
     return(
         <>
             <TitleTextbox title={title} />
             <Password 
                 placeholder={placeholder} 
+                setMyPassword = {setPassword}
+            />
+        </>
+    )
+}
+
+
+export function EmailLabel({title, placeholder, setEmail}: PropsEmail) {
+    
+    return (
+        <>
+            <TitleTextbox  
+                title = {title}
+            />
+            <EmailTextbox 
+                placeholder = {placeholder}
+                setMyEmail = {setEmail}
             />
         </>
     )

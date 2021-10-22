@@ -4,20 +4,51 @@ interface Props{
     placeholder: string
 }
 
-function GenericTextbox ({placeholder}: Props) {
-        return (
-            <Fragment>
-                <input type="email" className="form-control" aria-describedby="emailHelp" placeholder={placeholder}></input>
-            </Fragment>
-        );
+interface Email
+{
+    placeholder: string;
+    setMyEmail: (string: string)=> void;
 }
 
-export function Password({placeholder}: Props){
-    return(
-    <Fragment>
-        <input type="password" className="form-control" placeholder={placeholder}></input>
-    </Fragment>
+interface Password
+{
+    placeholder: string;
+    setMyPassword: (string: string)=> void;
+}
+
+
+function GenericTextbox ({placeholder}: Props) {
+    return (
+        <Fragment>
+            <input type="text" className="form-control" aria-describedby="emailHelp" placeholder={placeholder}></input>
+        </Fragment>
     );
+}
+
+export function EmailTextbox ({placeholder, setMyEmail}: Email) {
+    return (
+        <Fragment>
+            <input type="email" className="form-control" aria-describedby="emailHelp" placeholder={placeholder}
+                onChange={(event) =>
+                {
+                    setMyEmail(event.target.value)
+                }}
+            />
+        </Fragment>
+    );
+}
+
+export function Password({placeholder, setMyPassword}: Password){
+    return(
+        <Fragment>
+            <input type="password" className="form-control" placeholder={placeholder}
+                    onChange={(event) =>
+                    {
+                        setMyPassword(event.target.value)
+                    }}
+            />
+        </Fragment>
+    )
 }
 
 export default GenericTextbox;
