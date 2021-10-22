@@ -18,7 +18,6 @@ export function FormLogin() {
                         title = "Ingrese Email"
                         placeholder = "Email"
                         setEmail = {setUserEmail}
-                        {...console.log(userEmail)}
                     />
                 </div>
                 <div className="form-group">
@@ -26,7 +25,6 @@ export function FormLogin() {
                         title= "Ingrese contraseña"
                         placeholder = "Contraseña"
                         setPassword = {setUserPassword}
-                        {...console.log(userPassword)}
                     />
                 </div>
             </div>

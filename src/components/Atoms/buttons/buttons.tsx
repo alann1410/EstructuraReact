@@ -1,6 +1,4 @@
-import React, {useState, Fragment, Component} from 'react' //useState = para inicializar una variable, Fragment = para no encapsular el html en un div
-import Button from 'react-bootstrap/Button';
-import Register from "../../Templates/registerTemplate";
+import React, {useState, Fragment, Component} from 'react'
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 
@@ -15,7 +13,7 @@ interface Props{
     linkPage: string
 }
 
-function ButtonAccept ({text}: text){
+export default function ButtonAccept ({text}: text){
     return (
         <Fragment>
                 <button type="button" className="buttonLogin btn btn-primary">{text}</button>
@@ -39,12 +37,13 @@ export function ButtonCancel ({text}: text){
     );
 }
 
-interface btnBack
+interface textAndLink
 {
     text: string;
     ruta: string;
 }
-export function ButtonBack ({text, ruta}: btnBack){
+
+export function ButtonBack ({text, ruta}: textAndLink){
 
     let history = useHistory();
 
@@ -55,7 +54,7 @@ export function ButtonBack ({text, ruta}: btnBack){
     );
 }
 
-export function ButtonAcceptRedirect ({text, ruta}: btnBack){
+export function ButtonAcceptRedirect ({text, ruta}: textAndLink){
 
     let history = useHistory();
 
@@ -67,5 +66,4 @@ export function ButtonAcceptRedirect ({text, ruta}: btnBack){
 }
 
 
-export default ButtonAccept;
 
